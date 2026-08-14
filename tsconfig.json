@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "commonjs",  // Changed from "nodenext"
+    "target": "esnext",
+    "types": ["node"],     // Added node types
+    "lib": ["esnext"],     // Added lib
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "verbatimModuleSyntax": false,  // Changed to false for CommonJS
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "esModuleInterop": true  // Added for better CommonJS compatibility
+  }
+}
