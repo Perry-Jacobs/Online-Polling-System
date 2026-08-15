@@ -655,6 +655,14 @@
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 100%;
     }
+    .hover\:bg-green-500\/20:hover {
+      background-color: color-mix(in srgb, oklch(72.3% 0.219 149.579) 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-green-500\/20:hover {
+        background-color: color-mix(in oklab, var(--color-green-500) 20%, transparent);
+      }
+    }
     .hover\:bg-red-500\/10:hover {
       background-color: color-mix(in srgb, oklch(63.7% 0.237 25.331) 10%, transparent);
     }

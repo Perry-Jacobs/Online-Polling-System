@@ -31,7 +31,7 @@ export const HomePage = () => /*html*/`
 					<!-- Desktop Navigation -->
 					<div class="hidden lg:flex items-center space-x-1">
 						<!-- Live Polls (Active) -->
-						<a href="#" class="relative px-4 py-2 text-sm font-medium text-zinc-900 rounded-lg hover:bg-white/20 transition-all duration-200 group border border-green-500/20 bg-green-500/20 " aria-current="page">
+						<a href="#" class="relative px-4 py-2 text-sm font-medium text-zinc-900 rounded-lg hover:bg-green-500/20 transition-all duration-200 group border border-green-500/20 bg-green-500/20 " aria-current="page">
 						<span class="relative z-10 flex items-center gap-1.5">
 							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
