@@ -1,16 +1,20 @@
 import express from 'express';
-import type { Request, Response, Express } from 'express';
+import path from "path";
+import { fileURLToPath } from "url";
+import type { Express } from 'express';
+
 const app: Express = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const dotenv = require('dotenv');
-dotenv.config();
+// middleware
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/', (req: Request, res: Response): void => {
-  res.sendFile(__dirname + '/public/index.html');
-});
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// routes
+import pageRouter from "./routes/page.route.js";
+
+app.use("/", pageRouter);
+
+export default app;
