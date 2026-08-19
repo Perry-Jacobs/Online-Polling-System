@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String    @id
+  name      String
+  email     String    @unique
+  image     String
+  // I need to add Admin | User
+  message   Message[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Message {
+  id        String   @id
+  body      String
+  name      User     @relation(fields: [userID], references: [id])
+  userID    String
+  createdAt DateTime @default(now())
+}

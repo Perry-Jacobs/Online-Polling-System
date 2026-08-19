@@ -272,3 +272,4 @@ lerna-debug.log*
 deploy/
 deployment/
 *.deployment
+/src/generated/prisma
